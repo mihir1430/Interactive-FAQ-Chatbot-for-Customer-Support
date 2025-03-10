@@ -1,0 +1,193 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to right, #232526, #414345);
+    color: #f1f1f1;
+}
+
+/* FAQ Container */
+.faq-container {
+    width: 50%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
+}
+
+body.dark-mode .faq-container {
+    background: #2c2f33;
+    color: #f1f1f1;
+}
+
+/*  SCROLLABLE FAQ */
+.faq-container {
+    width: 50%;
+    max-height: 800px; /* Set a fixed max height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
+}
+
+/* Ensuring FAQs fit inside the container */
+.faq {
+    width: 100%;
+    overflow: hidden;
+}
+
+body.dark-mode .faq-container {
+    background: #2c2f33;
+    color: #f1f1f1;
+}
+
+
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+/* Search Bar */
+#search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+body.dark-mode #search-bar {
+    border: 2px solid #00f2fe;
+    background: #3b3e42;
+    color: white;
+}
+
+/* FAQ Sections */
+.faq {
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+body.dark-mode .faq {
+    background: #3b3e42;
+}
+
+/* FAQ Question Button */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #007BFF;
+    background: #eef6ff;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .faq-question {
+    background: #555;
+    color: #00f2fe;
+}
+
+/* Hover and Click Effects */
+.faq-question:hover {
+    background: #007BFF;
+    color: white;
+}
+
+body.dark-mode .faq-question:hover {
+    background: #00f2fe;
+    color: black;
+}
+
+/* Expand/Collapse Icon */
+.faq-question span {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* FAQ Answer Box */
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #ffffff;
+    border-left: 4px solid #007BFF;
+    font-size: 16px;
+    color: #444;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .faq-answer {
+    background: #555;
+    color: #f1f1f1;
+    border-left: 4px solid #00f2fe;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#dark-mode-toggle:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+body.dark-mode #dark-mode-toggle {
+    background: #00f2fe;
+    color: black;
+}
